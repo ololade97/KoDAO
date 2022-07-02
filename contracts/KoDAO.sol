@@ -26,7 +26,7 @@ contract KoDAO is ERC1155Supply, Ownable {
     }
 
     modifier onlyEOA() {
-        require(msg.sender == tx.origin, "Must use EOA");
+        require(msg.sender == tx.origin, "Must use Externally Owned Account (EOA)");
         _;
     }
 
